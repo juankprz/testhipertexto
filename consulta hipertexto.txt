@@ -1,0 +1,9 @@
+select avg(nota)as promedio, materias.nombre,cursos.nombre from notas INNER join materias on notas.materias_id=materias.id INNER JOIN cursos on materias.cursos_id=cursos.id group by notas.materias_id
+
+
+SELECT avg(nota) AS PROMEDIO, alumnos.nombre , materias.nombre FROM notas INNER JOIN alumnos ON notas.alumnos_dni= alumnos.dni INNER JOIN materias on notas.materias_id=materias.id GROUP BY materias_id
+
+
+SELECT notas.nota,cursos.nombre as curso,materias.nombre from notas INNER JOIN materias on notas.materias_id=materias.id INNER JOIN cursos on materias.cursos_id= cursos.id GROUP by materias.id
+
+SELECT notas.nota,cursos.nombre as curso,materias.nombre from notas INNER JOIN materias on notas.materias_id=materias.id INNER JOIN cursos on materias.cursos_id= cursos.id  WHERE cursos.id=2 GROUP by materias.id
